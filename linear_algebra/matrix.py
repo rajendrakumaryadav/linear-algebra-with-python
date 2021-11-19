@@ -9,8 +9,26 @@ class Matrix:
 	"""
 	
 	def __init__(self):
-		pass
+		print("Initializing Matrix...")
 	
-	def add_vector(self, v: Vector, w: Vector) -> Vector:
-		assert len(v) == len(w), "Vector must be of same length"
+	def assert_length(self, v: Vector, w: Vector):
+		assert len(w) == len(v), "Vector must be of same length"
+	
+	def addition(self, v: Vector, w: Vector) -> Vector:
+		self.assert_length(v, w)
 		return [v_i + w_i for v_i, w_i in zip(v, w)]
+	
+	def subtract(self, v: Vector, w: Vector) -> Vector:
+		self.assert_length(v, w)
+		return [v_i - w_i for v_i, w_i in zip(v, w)]
+	
+	def vector_sum(self, vectors: List[Vector]) -> Vector:
+		assert vectors, "no vectors provided!"
+		
+		num_elements = len(vectors[0])
+		assert all(len(v) == num_elements for v in vectors), "different sizes"
+		
+		return [
+			sum(vector[i] for vector in vectors)
+			for i in range(num_elements)
+		]
