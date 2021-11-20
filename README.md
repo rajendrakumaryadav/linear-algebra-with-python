@@ -32,3 +32,8 @@ tests/test_matrix.py ...                                                 [100%]
 ============================== 3 passed in 0.07s ===============================
 ```
 
+---
+### Credit
+- All the code is based on the [`Data Science from Scratch`](https://www.oreilly.com/library/view/data-science-from/9781491901410/) authored by __Joel Grus__, ISBN: **9781491901427**.
+- Published by: O'Reilly Media, Inc.
+
