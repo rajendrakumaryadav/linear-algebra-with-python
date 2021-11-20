@@ -32,3 +32,11 @@ class Matrix:
 			sum(vector[i] for vector in vectors)
 			for i in range(num_elements)
 		]
+	
+	def scaler_multiply(self, c: float, v: Vector) -> Vector:
+		"""multiply all elements of vector with c
+		```python
+			c*v_i
+		```
+		"""
+		return [c * v_i for v_i in v]
