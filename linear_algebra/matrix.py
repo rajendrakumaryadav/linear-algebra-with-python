@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+import logging
 from typing import List
 
 Vector = List[float]
@@ -40,3 +43,16 @@ class Matrix:
 		```
 		"""
 		return [c * v_i for v_i in v]
+	
+	def vector_mean(self, vectors: List[Vector]) -> Vector:
+		n = len(vectors)  # length of vectors
+		logging.warning("All Good...")
+		# reusing scaler_multiply and vector_sum() previously defined.
+		return self.scaler_multiply(1 / n, self.vector_sum(vectors))
+	
+	def dot(self, v: Vector, w: Vector) -> float:
+		assert len(v) == len(w), "Vectors size mismatched."
+		return sum(v_i * w_i for v_i, w_i in zip(v, w))
+	
+	def sum_of_square(self, v: Vector) -> float:
+		return self.dot(v, v)  # reusing dot()

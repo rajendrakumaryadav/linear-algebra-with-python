@@ -34,5 +34,18 @@ class MyTestCase(unittest.TestCase):
 		assert self.mat_obj.scaler_multiply(1 / 3, v1) == [1, 2, 3]
 		self.assertEqual(self.mat_obj.scaler_multiply(1 / 3, v1), [1, 2, 3])
 	
-	if __name__ == '__main__':
-		unittest.main()
+	def test_vectors_mean(self):
+		assert self.mat_obj.vector_mean([[1, 2], [3, 4], [5, 6]]) == [3, 4]
+		self.assertEqual(self.mat_obj.vector_mean([[1, 2], [3, 4], [5, 6]]), [3, 4])
+	
+	def test_vector_dot_products(self):
+		self.assertEqual(self.mat_obj.dot(self.v1, self.v2), 32)
+	
+	def test_sum_of_square(self):
+		self.assertEqual(self.mat_obj.sum_of_square(self.v1), 14)
+		
+		# def test_vector_dot_product_false(self):
+		# 	self.assertFalse(self.mat_obj.dot(self.v1, self.v2), 32)
+		
+		if __name__ == '__main__':
+			unittest.main()
