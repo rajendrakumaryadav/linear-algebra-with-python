@@ -4,7 +4,7 @@ from typing import List
 Vector = List[float]
 
 
-class Matrix:
+class Vector:
 	"""
 	__date__ = "19-11-2021"
 	"""
