@@ -11,9 +11,9 @@ $ cd linear-algebra-with-python/
 * if you wish to use this package please follow
 
 ```python
-from linear_algebra import matrix
+from linear_algebra import vector
 
-mat_obj = matrix.Matrix()
+mat_obj = vector.Vector()
 assert mat_obj.subtract([1, 2, 3], [4, 5, 6]) == [5, 7, 9]
 ```
 
@@ -21,15 +21,15 @@ assert mat_obj.subtract([1, 2, 3], [4, 5, 6]) == [5, 7, 9]
 
 ```bash
 $ bash ./run_all_test.sh
-============================= test session starts ==============================
-platform linux -- Python 3.8.12, pytest-6.2.4, py-1.10.0, pluggy-0.13.1
-rootdir: /home/username/Documents/linear-algebra-with-python
-plugins: anyio-2.2.0
-collected 3 items                                                              
+==================================================== test session starts ====================================================
+platform linux -- Python 3.8.12, pytest-6.2.5, py-1.11.0, pluggy-1.0.0
+rootdir: /home/username/Documents/linear-algebra
+collected 9 items                                                                                                           
 
-tests/test_matrix.py ...                                                 [100%]
+tests/test_matrix.py .                                                                                                [ 11%]
+tests/test_vector.py ........                                                                                         [100%]
 
-============================== 3 passed in 0.07s ===============================
+===================================================== 9 passed in 0.11s =====================================================
 ```
 
 ---
