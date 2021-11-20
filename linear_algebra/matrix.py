@@ -15,4 +15,3 @@ class Matrix:
 		num_rows = len(a)
 		num_cols = len(a[0]) if a else 0
 		return num_rows, num_cols
-	
